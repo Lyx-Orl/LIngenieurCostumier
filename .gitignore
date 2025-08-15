@@ -1,0 +1,22 @@
+# Ignorer les dossiers générés par Unity  
+LIngenieurCostumierUnity/[Ll]ibrary/  
+LIngenieurCostumierUnity/[Tt]emp/  
+LIngenieurCostumierUnity/[Oo]bj/  
+LIngenieurCostumierUnity/[Bb]uild/  
+LIngenieurCostumierUnity/[Ll]ogs/  
+LIngenieurCostumierUnity/[Uu]ser[Ss]ettings/  
+
+# Fichiers de projet/IDE  
+*.csproj  
+*.unityproj  
+*.sln  
+*.suo  
+
+# Fichiers sensibles (à ne pas versionner)  
+LIngenieurCostumierUnity/ProjectSettings/UnityConnectSettings.asset  
+LIngenieurCostumierUnity/ProjectSettings/EditorBuildSettings.asset  
+LIngenieurCostumierUnity/Assets/Plugins/*.config  # Si tu as des fichiers de config avec des clés API  
+
+# Fichiers OS/métadonnées  
+LIngenieurCostumierUnity/.DS_Store  
+LIngenieurCostumierUnity/Thumbs.db  
