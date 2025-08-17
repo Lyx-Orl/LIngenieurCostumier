@@ -57,8 +57,10 @@ public class ExcelReaderSimple : MonoBehaviour
                         if (reader.GetValue(0)?.ToString() == "jambes"){
                             string valeurText = reader.GetValue(1)?.ToString();
                             float valeurFloat = float.Parse(valeurText);
-                            MoveBoneLocal(GetBone("LeftFoot"),"y", ((valeurFloat)-45)/ratio);
-                            MoveBoneLocal(GetBone("RightFoot"),"y",((valeurFloat)-45)/ratio);
+                            MoveBoneLocal(GetBone("LeftFoot"),"y", ((valeurFloat)-45)/(ratio*2));
+                            MoveBoneLocal(GetBone("RightFoot"),"y",((valeurFloat)-45)/(ratio*2));
+                            MoveBoneLocal(GetBone("LeftFoot"),"z", -((valeurFloat)-45)/(ratio*2));
+                            MoveBoneLocal(GetBone("RightFoot"),"z",-((valeurFloat)-45)/(ratio*2));
                         }
 
                         if (reader.GetValue(0)?.ToString() == "avant-bras"){
@@ -66,6 +68,7 @@ public class ExcelReaderSimple : MonoBehaviour
                             float valeurFloat = float.Parse(valeurText);
                             MoveBoneLocal(GetBone("LeftForeArm"),"y", ((valeurFloat)-40)/ratio);
                             MoveBoneLocal(GetBone("RightForeArm"),"y",((valeurFloat)-40)/ratio);
+                            
                         }
 
                         if (reader.GetValue(0)?.ToString() == "bras"){
