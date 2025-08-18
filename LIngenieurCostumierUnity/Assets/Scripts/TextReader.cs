@@ -78,6 +78,12 @@ public class ExcelReaderSimple : MonoBehaviour
                             MoveBoneLocal(GetBone("RightHand"),"y",((valeurFloat)-40)/ratio);
                         }
 
+                        if (reader.GetValue(0)?.ToString() == "tete"){
+                            string valeurText = reader.GetValue(1)?.ToString();
+                            float valeurFloat = float.Parse(valeurText);
+                            MoveBoneLocal(GetBone("HeadTop_End"),"y", ((valeurFloat)-30)/ratio);
+                        }
+
                     }
                 } while (reader.NextResult()); // Passe à la feuille suivante
             }
