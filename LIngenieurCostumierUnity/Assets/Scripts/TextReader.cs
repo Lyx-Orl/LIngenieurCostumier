@@ -81,7 +81,7 @@ public class ExcelReaderSimple : MonoBehaviour
                         if (reader.GetValue(0)?.ToString() == "tete"){
                             string valeurText = reader.GetValue(1)?.ToString();
                             float valeurFloat = float.Parse(valeurText);
-                            MoveBoneLocal(GetBone("HeadTop_End"),"y", ((valeurFloat)-30)/ratio);
+                            ScaleBoneLocal(GetBone("Head"),"y",valeurFloat/30);
                         }
 
                     }
@@ -157,5 +157,36 @@ public class ExcelReaderSimple : MonoBehaviour
 
         // Déplacement dans l'espace LOCAL (même si l'os est tourné)
         bone.Translate(localMovement, Space.Self);
+    }
+
+
+    public static void ScaleBoneLocal(Transform bone, string axis, float value)
+    {
+        if (bone == null)
+        {
+            Debug.LogError("L'os est null !");
+            return;
+        }
+
+
+        Vector3 newScale = bone.localScale;
+
+        switch (axis.ToLower())
+        {
+            case "x":
+                newScale.x = value;
+                break;
+            case "y":
+                newScale.y = value;
+                break;
+            case "z":
+                newScale.z = value;
+                break;
+            default:
+                Debug.LogError("Axe invalide. Utilisez 'x', 'y' ou 'z'.");
+                return;
+        }
+
+        bone.localScale = newScale;
     }
 }
