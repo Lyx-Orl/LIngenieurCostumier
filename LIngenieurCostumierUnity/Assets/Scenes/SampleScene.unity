@@ -512,6 +512,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 05c3c425fdc1b5dccbbe4d6f4fe271ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1527994874}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 05c3c425fdc1b5dccbbe4d6f4fe271ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1527994875}
   m_SourcePrefab: {fileID: 100100000, guid: 05c3c425fdc1b5dccbbe4d6f4fe271ff, type: 3}
 --- !u!1 &1527994873 stripped
 GameObject:
@@ -532,6 +535,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   squelette: {fileID: 916478459}
   excelFileName: testExcel.xlsx
+--- !u!114 &1527994875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527994873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf43bd7839b10a9589d27e41c2874d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animationName: YourAnimationName
+  targetFrame: 2
+  framesPerSecond: 30
 --- !u!4 &1929946553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1059989450195421988, guid: 05c3c425fdc1b5dccbbe4d6f4fe271ff, type: 3}
